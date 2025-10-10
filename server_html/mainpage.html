@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <div style="display: flex; justify-content: center;">
+  
+    <a href="/scan" class="mainpage">Сканировать файлы</a>
+    <div class="dropdown">
+        <button class="dropbtn">База Данных</button>
+        <div class="dropdown-content">
+            <a href="/segments">Сегменты реки</a>
+            <a href="/objects">Объекты реки</a>
+            <a href="/mmsi">Найденные объекты</a>
+           
+        </div>
+    </div>
+</div>
+
+
+<div class="formall">
+<form action="/foldercheck" method="POST">
+    <div class="formtext">Введите путь ко всем папкам</div>
+    <div class="formmain">
+        <input type="text" name="path" placeholder="Введите путь к папке сканирования" class="forminput">
+    </div>
+
+    <div class="formtext">Введите название папок сканирования</div>
+    <div >
+        <input type="text" name="folder" placeholder="Введите название папок сканирования" class="forminput">
+    </div>
+    <div>
+        <input type="submit" name="btn" value="Отправить">
+    </div>
+</form>
+    
+</div>
+</body>
